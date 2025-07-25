@@ -4,63 +4,69 @@ Química General | id: quim-gen
 Biología Celular e Histología | id: biocel
 Fundamentos de las Ciencias Farmacéuticas | id: fund-farma
 Introducción a la Farmacia | id: intro-farma
+Electivo de comunicación | id: elec
 
 SEMESTRE 2
 Cálculo | id: calculo | prereq: mate
 Química Inorgánica | id: quim-inorg | prereq: quim-gen
-Bioquímica | id: bioq | prereq: biocel
+Bioquímica | id: bioq | prereq: biocel quim-gen
 Evolución de los Medicamentos | id: evolucion | prereq: fund-farma
 Farmacia Privada | id: farma-priv | prereq: intro-farma
+Electivo de comunicación | id: elec2
 
 SEMESTRE 3
 Física Aplicada | id: fisica | prereq: calculo
-Química Orgánica | id: quim-org | prereq: quim-inorg
-Fisiología Humana | id: fisio | prereq: bioq
-Análisis Químico e Instrumental | id: analisis-q | prereq: quim-gen
-Electivo de Comunicación | id: elec-com1
+Química analítica | id: quim-ana | prereq: quim-inorg
+Fisiología Humana | id: fisio-hum | prereq: bioq
+Bioestadística | id: bioes | prereq: mate
+Legislación farmacéutica | id: legi-far 
+Electivo de desarrollo del pensamiento | id: elec-des
 
 SEMESTRE 4
-Farmacognosia y Fitoterapia | id: farmafit | prereq: quim-org
-Farmacología | id: farma1 | prereq: fisio
+Química orgánica | id: quim-org | prereq: quim-gen
+Fisiopatología | id: fisio | prereq: fisio-hum
+Farmacognosia y Fitoterapia | id: farmafit | prereq: quim-ana
+Análisis Químico e Instrumental | id: analisis-q | prereq: quim-ana
 Microbiología y Parasitología | id: microbio | prereq: bioq
-Electivo de Comunicación | id: elec-com2
+Taller integrado de biociencias | id: taller-bio | prereq: quim-ino y evoluvion y fisio-hum
 
 SEMESTRE 5
-Farmacología de Sistemas | id: farma2 | prereq: farma1
+Farmacología | id: farma1 | prereq: fisio-hum
 Farmacoquímica I | id: farmaco1 | prereq: quim-org
+Físicoquímica Farmacéutica | id: fisicoq | prereq: quim-org fisica
 Epidemiología | id: epidemio | prereq: microbio
-Electivo de Desarrollo del Pensamiento | id: elec-pens
-
-SEMESTRE 6
-Farmacoquímica II | id: farmaco2 | prereq: farmaco1
-Físicoquímica Farmacéutica | id: fisicoq | prereq: quim-org
-Salud Pública | id: salud-pub | prereq: epidemio
+Introducción a la investigacion en ciencias f. | id: intro-inve | bioes
 Electivo de Desarrollo Personal | id: elec-pers
 
-SEMESTRE 7
-Tecnología Farmacéutica I | id: tecfarma1 | prereq: fisicoq
-Bioquímica Clínica | id: bioq-clin | prereq: bioq
+SEMESTRE 6
+Farmacología de Sistemas | id: farma2 | prereq: farma1
+Farmacoquímica II | id: farmaco2 | prereq: farmaco1
+Tecnología Farmacéutica I | id: tecfarma1 | prereq: fisicoq y analisis-q
+Salud Pública | id: salud-pub | prereq: epidemio
 Metodología de Investigación Farmacéutica | id: met-invest | prereq: farmaco2
 Electivo de Responsabilidad Social | id: elec-rs
 
-SEMESTRE 8
+SEMESTRE 7
 Tecnología Farmacéutica II | id: tecfarma2 | prereq: tecfarma1
+Bioquímica Clínica | id: bioq-clin | prereq: bioq
 Diseño de Proyectos en Investigación Farmacéutica | id: diseno-proy | prereq: met-invest
-Toxicología | id: toxico | prereq: bioq-clin
-Seminario de Grado | id: semigrado | prereq: diseno-proy
+Farmacia Asistencial (A+S) | id: farma-asist | prereq: salud-pub
+Práctica I en Oficina de Farmacia | id: pract1 | prereq: farma-priv
 Electivo de Ética | id: elec-etica
 
-SEMESTRE 9
+SEMESTRE 8
+Toxicología | id: toxico | prereq: bioq-clin
+Seminario de Grado | id: semigrado | prereq: diseno-proy
+Tecnología Cosmética | id: tec-cosme | prereq: tecfarma2
 Farmacia Clínica | id: farma-clin | prereq: bioq-clin
-Farmacia Asistencial (A+S) | id: farma-asist | prereq: salud-pub
 Taller Integrado de Farmacología (Ev. Ciclo) | id: taller-farma | prereq: farma2
-Práctica I en Oficina de Farmacia | id: pract1 | prereq: farma-priv
+
+SEMESTRE 9
+Economía y Marketing Farmacéutico | id: econ-mark | prereq: farma-asist
+Práctica II: Farmacia Asistencial | id: pract2 | prereq: farma-asist
 
 SEMESTRE 10
-Economía y Marketing Farmacéutico | id: econ-mark | prereq: farma-asist
 Farmacovigilancia | id: farmacovig | prereq: farma-clin
-Tecnología Cosmética | id: tec-cosme | prereq: tecfarma2
-Práctica II: Farmacia Asistencial | id: pract2 | prereq: farma-asist
 Práctica III: Farmacia Clínica (Ev. Ciclo) | id: pract3 | prereq: farma-clin`;
 
 document.addEventListener("DOMContentLoaded", () => {
