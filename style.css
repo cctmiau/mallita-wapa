@@ -1,3 +1,4 @@
+/* Estilos base */
 body {
   font-family: sans-serif;
   background: #fdf6f9;
@@ -10,16 +11,19 @@ h1 {
   margin-bottom: 40px;
 }
 
+/* Contenedor horizontal de todos los semestres */
 #contenedor-malla {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
   gap: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
+  padding: 20px;
   align-items: flex-start;
 }
 
+/* Cada semestre como una columna */
 .semestre {
   flex: 0 0 300px;
   border: 2px dashed #ccc;
@@ -28,6 +32,7 @@ h1 {
   padding: 10px;
   text-align: center;
   min-height: 300px;
+  scroll-snap-align: start;
 }
 
 .semestre h2 {
@@ -38,12 +43,13 @@ h1 {
   border-radius: 6px;
 }
 
+/* Diseño de cada ramo */
 .ramo {
   display: block;
   margin: 10px auto;
   padding: 10px 12px;
   border-radius: 10px;
-  background-color: #ffb6c1;
+  background-color: #ffb6c1; /* Rosado por defecto */
   cursor: pointer;
   transition: 0.3s;
   font-weight: bold;
@@ -53,21 +59,24 @@ h1 {
   text-align: center;
 }
 
+/* Ramo aprobado */
 .ramo.aprobado {
   background-color: mediumorchid;
   color: white;
   text-decoration: line-through;
 }
 
+/* Ramo bloqueado por prerrequisito */
 .ramo.bloqueado {
   background-color: #d3d3d3;
   color: #777;
   cursor: not-allowed;
 }
 
-.ramo.PC { border-left-color: #e53935; }
-.ramo.TR { border-left-color: #43a047; }
-.ramo.CE { border-left-color: #1e88e5; }
-.ramo.RS { border-left-color: #ffb300; }
-.ramo.HC { border-left-color: #9e9e9e; }
-.ramo.TE { border-left-color: #8e24aa; }
+/* Colores por competencias opcionales */
+.ramo.PC { border-left-color: #e53935; } /* Pensamiento Crítico */
+.ramo.TR { border-left-color: #43a047; } /* Trabajo en equipo */
+.ramo.CE { border-left-color: #1e88e5; } /* Comportamiento Ético */
+.ramo.RS { border-left-color: #ffb300; } /* Responsabilidad Social */
+.ramo.HC { border-left-color: #9e9e9e; } /* Área básica o profesional */
+.ramo.TE { border-left-color: #8e24aa; } /* Tecnología específica */
