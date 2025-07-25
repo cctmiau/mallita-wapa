@@ -9,7 +9,7 @@ Electivo de comunicación | id: elec
 SEMESTRE 2
 Cálculo | id: calculo | prereq: mate
 Química Inorgánica | id: quim-inorg | prereq: quim-gen
-Bioquímica | id: bioq | prereq: biocel quim-gen
+Bioquímica | id: bioq | prereq: biocel,quim-gen
 Evolución de los Medicamentos | id: evolucion | prereq: fund-farma
 Farmacia Privada | id: farma-priv | prereq: intro-farma
 Electivo de comunicación | id: elec2
@@ -28,20 +28,20 @@ Fisiopatología | id: fisio | prereq: fisio-hum
 Farmacognosia y Fitoterapia | id: farmafit | prereq: quim-ana
 Análisis Químico e Instrumental | id: analisis-q | prereq: quim-ana
 Microbiología y Parasitología | id: microbio | prereq: bioq
-Taller integrado de biociencias | id: taller-bio | prereq: quim-ino y evoluvion y fisio-hum
+Taller integrado de biociencias | id: taller-bio | prereq: quim-ino,evoluvion,fisio-hum
 
 SEMESTRE 5
 Farmacología | id: farma1 | prereq: fisio-hum
 Farmacoquímica I | id: farmaco1 | prereq: quim-org
-Físicoquímica Farmacéutica | id: fisicoq | prereq: quim-org fisica
+Físicoquímica Farmacéutica | id: fisicoq | prereq: quim-org,fisica
 Epidemiología | id: epidemio | prereq: microbio
-Introducción a la investigacion en ciencias f. | id: intro-inve | bioes
+Introducción a la investigacion en ciencias f. | id: intro-inve | prereq: bioes
 Electivo de Desarrollo Personal | id: elec-pers
 
 SEMESTRE 6
 Farmacología de Sistemas | id: farma2 | prereq: farma1
 Farmacoquímica II | id: farmaco2 | prereq: farmaco1
-Tecnología Farmacéutica I | id: tecfarma1 | prereq: fisicoq y analisis-q
+Tecnología Farmacéutica I | id: tecfarma1 | prereq: fisicoq,analisis-q
 Salud Pública | id: salud-pub | prereq: epidemio
 Metodología de Investigación Farmacéutica | id: met-invest | prereq: farmaco2
 Electivo de Responsabilidad Social | id: elec-rs
