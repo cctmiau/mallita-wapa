@@ -71,7 +71,7 @@ Práctica III: Farmacia Clínica (Ev. Ciclo) | id: pract3 | prereq: farma-clin`;
 
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-malla");
-  const semestres = malla.trim().split(/\n(?=SEMESTRE)/);
+  const semestres = malla.trim().split(/\r?\n(?=SEMESTRE)/);
 
   for (let bloque of semestres) {
     const lineas = bloque.trim().split("\n");
